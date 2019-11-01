@@ -16,6 +16,7 @@ class InfoTableViewCell: UITableViewCell {
     
     static let cellName = "InfoTableViewCell"
     static let cellNib = UINib(nibName: "InfoTableViewCell", bundle: Bundle.main)
+    static let cellHeight: CGFloat = 100.0
     
     
     override func awakeFromNib() {

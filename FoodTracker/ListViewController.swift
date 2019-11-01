@@ -20,12 +20,7 @@ class ListViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
         super.viewDidLoad()
 
         self.foodListTableView.register(InfoTableViewCell.cellNib, forCellReuseIdentifier: InfoTableViewCell.cellName)
-        
-        
-        // Use the edit button item provided by the table view controller.
-//        navigationItem.leftBarButtonItem = editButtonItem
-       // Load any saved meals, otherwise load sample data.
-//         loadSampleMeals()
+
         
        if let savedMeals = loadMeals() {
            meals += savedMeals
@@ -111,8 +106,7 @@ class ListViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        70.0
-
+        return InfoTableViewCell.cellHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
