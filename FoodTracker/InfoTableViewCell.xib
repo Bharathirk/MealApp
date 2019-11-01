@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="123" id="KGk-i7-Jjw" customClass="InfoTableViewCell" customModule="FoodTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="432" height="123"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="432" height="123"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R2B-ew-gVe">
+                        <rect key="frame" x="20" y="21.5" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="5cP-Xx-4Zh"/>
+                            <constraint firstAttribute="width" constant="80" id="sBq-Vu-RD7"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNZ-qW-xdW">
+                        <rect key="frame" x="110" y="29.5" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kag-fx-TFu" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                        <rect key="frame" x="110" y="49.5" width="220" height="44"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Kag-fx-TFu" firstAttribute="bottom" secondItem="R2B-ew-gVe" secondAttribute="bottom" constant="-8" id="C9m-wb-84a"/>
+                    <constraint firstItem="aNZ-qW-xdW" firstAttribute="top" secondItem="R2B-ew-gVe" secondAttribute="top" constant="8" id="OVW-Ev-v1P"/>
+                    <constraint firstItem="aNZ-qW-xdW" firstAttribute="leading" secondItem="R2B-ew-gVe" secondAttribute="trailing" constant="10" id="R7m-Df-XpT"/>
+                    <constraint firstItem="R2B-ew-gVe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="TZv-0y-Bbk"/>
+                    <constraint firstItem="Kag-fx-TFu" firstAttribute="leading" secondItem="aNZ-qW-xdW" secondAttribute="leading" id="btT-w7-zxy"/>
+                    <constraint firstItem="R2B-ew-gVe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="i3N-q2-PAk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="foodImage" destination="R2B-ew-gVe" id="ujI-eD-Bhd"/>
+                <outlet property="foodLableName" destination="aNZ-qW-xdW" id="4h9-Ln-sWI"/>
+                <outlet property="foodRating" destination="Kag-fx-TFu" id="dhd-nT-pt4"/>
+            </connections>
+            <point key="canvasLocation" x="127.53623188405798" y="69.308035714285708"/>
+        </tableViewCell>
+    </objects>
+</document>
